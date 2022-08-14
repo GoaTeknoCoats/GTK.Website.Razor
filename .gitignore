@@ -2,4 +2,5 @@
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
 
-/GTK.Website.Razor/.vs/GTK.Website.Razor
+/GTK.Website.Razor/.vs
+/GTK.Website.Razor/GTK.Website.Razor/obj
