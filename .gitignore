@@ -3,4 +3,6 @@
 ################################################################################
 
 /GTK.Website.Razor/.vs
+/GTK.Website.Razor/GTK.Website.Razor/bin
 /GTK.Website.Razor/GTK.Website.Razor/obj
+.vscode
