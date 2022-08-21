@@ -1,5 +1,6 @@
 ﻿@page "/Home"
 @page "/"
+@inject IJSRuntime JsRuntime;
 
 <PageTitle>Home - Goateknocoats</PageTitle>
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -92,3 +93,13 @@
         <span class="sr-only">Next</span>
     </a>
 </div>
+
+@functions {
+    protected async override Task OnAfterRenderAsync(bool firstRender)
+    {
+      if (firstRender) 
+      {
+        await JsRuntime.InvokeAsync<object>("initializeCarousel");
+      }
+    }
+}
