@@ -1,17 +1,62 @@
 ﻿@inherits LayoutComponentBase
 
-<div class="page">
-    <div class="sidebar">
-        <NavMenu />
-    </div>
-
-    <main>
-        <div class="top-row px-4">
-            <a href="https://docs.microsoft.com/aspnet/" target="_blank">About</a>
-        </div>
-
-        <article class="content px-4">
+    <header>
+        <nav class="navbar navbar-expand-md navbar-toggleable-md navbar-light bg-transparent box-shadow p-md-0">
+            <div class="container-fluid pr-sm-0">
+                <a class="navbar-brand" href="/Home">
+                    <img src="images/gtk-logo.jpeg" />
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse"
+                        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-md-inline-flex flex-md-row-reverse">
+                    <ul class="navbar-nav flex-grow-1 h4 text-center justify-content-end">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="/AboutUs">About Us</a>
+                        </li>
+                        <li role="separator" class="divider"></li>
+                        <li class="nav-item dropdown">
+                            <a aria-expanded="false" aria-haspopup="true" class="nav-link text-dark dropdown-toggle" data-toggle="dropdown" href="/EpoxyPaints" id="ourProducts">Our Products</a>
+                            <div class="dropdown-menu rounded-0 text-center" aria-labelledby="ourProducts">
+                                <a class="dropdown-item" href="/EpoxyPaints">Epoxy Paints</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="/PolyUrethanePaints">Poly Urethane Paints</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="/AlkydBasedPaints">Alkyd Based Paints</a>
+                            </div>
+                        </li>
+                        <li role="separator" class="divider"></li>
+                        <li class="nav-item dropdown">
+                            <a aria-expanded="false" aria-haspopup="true" class="nav-link text-dark dropdown-toggle" data-toggle="dropdown" href="/Marine" id="applications">Applications</a>
+                            <div class="dropdown-menu rounded-0 text-center" aria-labelledby="applications">
+                                <a class="dropdown-item" href="/Marine">Paints for Marine Application</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="/DamsAndPipeline">Paints for Dams and Pipeline</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="/Industrial">Industrial Paints</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="/Chemical">Paints for Chemical Plants</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="/Floor">Floor Coatings</a>
+                            </div>
+                        </li>
+                        <li role="separator" class="divider"></li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="/ContactUs">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container-fluid main-content">
+        <main role="main" class="pb-3">
             @Body
-        </article>
-    </main>
-</div>
+        </main>
+    </div>
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2020 Goateknocoats. All Rights Reserved.
+        </div>
+    </footer>

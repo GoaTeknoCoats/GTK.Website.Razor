@@ -1,0 +1,70 @@
+﻿@page "/ContactUs"
+
+<PageTitle>Contact Us - Goateknocoats</PageTitle>
+<div class="more-details position-relative row">
+    <h1 class="has-brush display-4">
+        <span>
+            Contact Us
+        </span>
+    </h1>
+    <span class="brush-container">
+        <img class="brush" src="images/brush.svg" />
+    </span>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-6">
+                <h4 class="mt-4">Easy To Get In Touch</h4>
+                <p class="container-fluid mt-1">
+                    <a href="https://www.google.com/maps/search/?api=1&query=15.500426852619086,73.930787038901" target="_blank">
+                        <span class="fas fa-lg fa-gtk-color-1 fa-map-marker-alt"></span>
+                        Plot No 11 And 12
+                        <br>Corlim Industrial Estate
+                        <br>Near Scoop Oxygen
+                        <br>Corlim, Goa 403110
+                        <br>India
+                    </a>
+                </p>
+                <p class="container-fluid mt-1">
+                    <a href="mailto:goateknocoats@gmail.com" target="_blank">
+                        <span class="far fa-lg fa-gtk-color-1 fa-envelope"></span>
+                        goateknocoats@gmail.com
+                    </a>
+                </p>
+                <p class="container-fluid mt-1">
+                    <a href="tel:9421241651" target="_blank">
+                        <span class="fas fa-lg fa-gtk-color-1 fa-phone"></span>
+                        (+91) 9421241651
+                    </a>
+                </p>
+                <p class="container-fluid mt-1">
+                    <span class="far fa-lg fa-gtk-color-1 fa-clock"></span>
+                    Hours of operation
+                    <br>Monday to Saturday 9:00 am to 5:30 pm
+                </p>
+            </div>
+            <div class="col-md-6 d-none">
+                <h4 class="mt-4">Send us a Message</h4>
+                <form action="/action_page.php">
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" class="form-control" id="name" placeholder="Enter name" name="name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+                    </div>
+                    <div class="form-group">
+                        <label for="contact">Contact:</label>
+                        <input type="tel" class="form-control" id="contact" placeholder="Enter contact" name="contact">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message:</label>
+                        <textarea class="form-control" id="message" placeholder="Type your message"
+                                  name="message"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

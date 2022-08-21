@@ -1,15 +1,27 @@
-﻿@import url('open-iconic/font/css/open-iconic-bootstrap.min.css');
-
-html, body {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+.navbar {
+    z-index: 1;
 }
 
-h1:focus {
-    outline: none;
+.navbar-brand img {
+    width: 6rem;
+    height: 3rem;
 }
 
-a, .btn-link {
-    color: #0071c1;
+.dropdown-item {
+    font-size: 1.25rem;
+}
+
+a.navbar-brand {
+    white-space: normal;
+    text-align: center;
+    word-break: break-all;
+}
+
+/* Provide sufficient contrast against white background */
+a {
+    color: #0366d6;
 }
 
 .btn-primary {
@@ -18,47 +30,295 @@ a, .btn-link {
     border-color: #1861ac;
 }
 
-.content {
-    padding-top: 1.1rem;
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
 }
 
-.valid.modified:not([type=checkbox]) {
-    outline: 1px solid #26b050;
+.nav-item .nav-link:hover {
+    font-weight: 700;
+    color: steelblue !important;
 }
 
-.invalid {
-    outline: 1px solid red;
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+    font-size: 14px;
+    background-color: aliceblue;
 }
 
-.validation-message {
-    color: red;
+.border-top {
+    border-top: 1px solid #e5e5e5;
 }
 
-#blazor-error-ui {
-    background: lightyellow;
+.border-bottom {
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow {
+    box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy {
+    font-size: 1rem;
+    line-height: inherit;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    /* Margin bottom by footer height */
+    margin-bottom: 60px;
+}
+
+.footer {
+    position: absolute;
     bottom: 0;
-    box-shadow: 0 -1px 2px rgba(0, 0, 0, 0.2);
-    display: none;
-    left: 0;
-    padding: 0.6rem 1.25rem 0.7rem 1.25rem;
-    position: fixed;
     width: 100%;
-    z-index: 1000;
+    white-space: nowrap;
+    line-height: 60px; /* Vertically center the text there */
 }
 
-    #blazor-error-ui .dismiss {
-        cursor: pointer;
-        position: absolute;
-        right: 0.75rem;
-        top: 0.5rem;
-    }
-
-.blazor-error-boundary {
-    background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTYiIGhlaWdodD0iNDkiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIG92ZXJmbG93PSJoaWRkZW4iPjxkZWZzPjxjbGlwUGF0aCBpZD0iY2xpcDAiPjxyZWN0IHg9IjIzNSIgeT0iNTEiIHdpZHRoPSI1NiIgaGVpZ2h0PSI0OSIvPjwvY2xpcFBhdGg+PC9kZWZzPjxnIGNsaXAtcGF0aD0idXJsKCNjbGlwMCkiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0yMzUgLTUxKSI+PHBhdGggZD0iTTI2My41MDYgNTFDMjY0LjcxNyA1MSAyNjUuODEzIDUxLjQ4MzcgMjY2LjYwNiA1Mi4yNjU4TDI2Ny4wNTIgNTIuNzk4NyAyNjcuNTM5IDUzLjYyODMgMjkwLjE4NSA5Mi4xODMxIDI5MC41NDUgOTIuNzk1IDI5MC42NTYgOTIuOTk2QzI5MC44NzcgOTMuNTEzIDI5MSA5NC4wODE1IDI5MSA5NC42NzgyIDI5MSA5Ny4wNjUxIDI4OS4wMzggOTkgMjg2LjYxNyA5OUwyNDAuMzgzIDk5QzIzNy45NjMgOTkgMjM2IDk3LjA2NTEgMjM2IDk0LjY3ODIgMjM2IDk0LjM3OTkgMjM2LjAzMSA5NC4wODg2IDIzNi4wODkgOTMuODA3MkwyMzYuMzM4IDkzLjAxNjIgMjM2Ljg1OCA5Mi4xMzE0IDI1OS40NzMgNTMuNjI5NCAyNTkuOTYxIDUyLjc5ODUgMjYwLjQwNyA1Mi4yNjU4QzI2MS4yIDUxLjQ4MzcgMjYyLjI5NiA1MSAyNjMuNTA2IDUxWk0yNjMuNTg2IDY2LjAxODNDMjYwLjczNyA2Ni4wMTgzIDI1OS4zMTMgNjcuMTI0NSAyNTkuMzEzIDY5LjMzNyAyNTkuMzEzIDY5LjYxMDIgMjU5LjMzMiA2OS44NjA4IDI1OS4zNzEgNzAuMDg4N0wyNjEuNzk1IDg0LjAxNjEgMjY1LjM4IDg0LjAxNjEgMjY3LjgyMSA2OS43NDc1QzI2Ny44NiA2OS43MzA5IDI2Ny44NzkgNjkuNTg3NyAyNjcuODc5IDY5LjMxNzkgMjY3Ljg3OSA2Ny4xMTgyIDI2Ni40NDggNjYuMDE4MyAyNjMuNTg2IDY2LjAxODNaTTI2My41NzYgODYuMDU0N0MyNjEuMDQ5IDg2LjA1NDcgMjU5Ljc4NiA4Ny4zMDA1IDI1OS43ODYgODkuNzkyMSAyNTkuNzg2IDkyLjI4MzcgMjYxLjA0OSA5My41Mjk1IDI2My41NzYgOTMuNTI5NSAyNjYuMTE2IDkzLjUyOTUgMjY3LjM4NyA5Mi4yODM3IDI2Ny4zODcgODkuNzkyMSAyNjcuMzg3IDg3LjMwMDUgMjY2LjExNiA4Ni4wNTQ3IDI2My41NzYgODYuMDU0N1oiIGZpbGw9IiNGRkU1MDAiIGZpbGwtcnVsZT0iZXZlbm9kZCIvPjwvZz48L3N2Zz4=) no-repeat 1rem/1.8rem, #b32121;
-    padding: 1rem 1rem 1rem 3.7rem;
-    color: white;
+.carousel-caption {
+    top: 20%;
+    bottom: auto;
+    z-index: 0;
+    color: khaki;
 }
 
-    .blazor-error-boundary::after {
-        content: "An error has occurred."
+.carousel-item img {
+    display: block;
+    height: auto;
+    width: 100%;
+}
+
+.about-us img {
+    width: 100%;
+}
+
+.about-us .centered {
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+    .about-us .centered h1 {
+        background-color: rgba(44, 130, 201, 0.8);
     }
+
+    .about-us .centered p {
+        font-size: 1.10rem;
+    }
+
+.about-us .more-details p {
+    margin-top: 10px;
+}
+
+.more-details .brush {
+    display: inline;
+    width: 6.5rem;
+    transform: rotate(45deg);
+    left: 100%;
+}
+
+.more-details .brush-container {
+    position: absolute;
+    top: -18px;
+}
+
+.more-details h1.has-brush {
+    background-image: linear-gradient(45deg, red, yellow);
+    width: 100%;
+    height: 4rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+    .more-details h1.has-brush span {
+        line-height: 4rem;
+    }
+
+.more-details h1 span {
+    opacity: 0;
+}
+
+.more-details h1.has-brush {
+    -webkit-animation: title-animation 1.5s ease forwards;
+}
+
+.more-details h1 span {
+    -webkit-animation: title-text-animation 0s ease forwards 1s;
+}
+
+.more-details .brush-container {
+    -webkit-animation: brush-run-animation 1.5s ease forwards;
+}
+
+.more-details .brush {
+    -webkit-animation: brush-hide-animation 0s ease forwards 1.5s;
+}
+
+@-webkit-keyframes title-animation {
+    from {
+        width: 0%;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+@-webkit-keyframes title-text-animation {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes brush-run-animation {
+    from {
+        left: 0;
+    }
+
+    to {
+        left: 100%;
+    }
+}
+
+@-webkit-keyframes brush-hide-animation {
+    from {
+        width: 100%;
+    }
+
+    to {
+        width: 0%;
+    }
+}
+
+.fa-gtk-color-1 {
+    color: cadetblue;
+}
+
+.display-4 {
+    font-size: 2rem;
+}
+
+.nav-link, .dropdown-item {
+    text-transform: uppercase;
+    font-size: 1rem;
+}
+
+header {
+    background-color: aliceblue;
+}
+
+.main-content {
+    background-color: aliceblue;
+}
+
+footer .container {
+    color: aliceblue;
+    background-color: black;
+    max-width: 100%;
+}
+
+button:focus {
+    outline: none !important;
+}
+
+.dropdown-menu {
+    background-color: aliceblue;
+}
+
+img.zoom {
+    width: 100%;
+    border-radius: 5px;
+    object-fit: cover;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+}
+
+    img.zoom:hover {
+        box-shadow: 0 0 5px 2px red;
+    }
+
+@media(max-width: 767px) {
+    .display-4 {
+        font-size: 1.5rem;
+        font-weight: 400;
+    }
+
+    .divider {
+        height: 1px;
+        overflow: hidden;
+        margin: 0 0 3px 0;
+        background-color: lightgray;
+    }
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+
+    .carousel-caption {
+        top: 30%;
+    }
+
+    .navbar-nav {
+        padding-right: 3vw;
+    }
+
+    .nav-item {
+        height: 4rem;
+        line-height: 3rem;
+        padding: 0px 1vw;
+        width: 10rem;
+    }
+
+    .dropdown-item {
+        height: 2rem;
+        line-height: 1.5rem;
+    }
+
+    .dropdown-menu {
+        top: calc(100% - 2px);
+    }
+
+    .dropdown:hover .dropdown-menu {
+        display: block;
+        margin-top: 0;
+    }
+
+    .dropdown-menu .dropdown-item:hover {
+        background: none !important;
+        color: steelblue !important;
+    }
+
+    .dropdown > .dropdown-toggle:active {
+        pointer-events: none;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1000px) {
+    ul.h4 {
+        font-size: 2.1vw;
+    }
+}
+
+@media (max-width: 500px) {
+    .about-us .centered {
+        top: 15%;
+    }
+}
